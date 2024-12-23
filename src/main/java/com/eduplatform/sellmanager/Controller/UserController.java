@@ -9,11 +9,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class UserController {
     @Autowired
     UserService userService;
     @GetMapping
     public List<User> getUser() {
+        System.out.println(11111111);
         return userService.getAllUsers();
     }
     @GetMapping("/{id}")

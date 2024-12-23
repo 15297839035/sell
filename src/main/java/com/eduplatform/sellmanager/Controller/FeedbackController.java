@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/feedback")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class FeedbackController {
     @Autowired
     FeedbackService feedbackService;

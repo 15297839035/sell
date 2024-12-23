@@ -6,13 +6,13 @@ import com.eduplatform.sellmanager.Service.RewardRecordService;
 import com.eduplatform.sellmanager.Service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/rewardrecord")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class RewardRecordController {
     @Autowired
     private RewardRecordService rewardRecordService;

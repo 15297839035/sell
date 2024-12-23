@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/config")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class ConfigController {
     @Autowired
     private ConfigService configService;

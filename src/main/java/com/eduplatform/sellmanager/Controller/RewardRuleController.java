@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rewardrule")
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class RewardRuleController {
     @Autowired
     private RewardRuleService rewardRuleService;

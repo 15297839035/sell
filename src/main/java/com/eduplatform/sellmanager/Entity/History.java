@@ -8,7 +8,7 @@ public class History {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer time;
+    private String time;
     private Integer amount;
 
     public Integer getId() {
@@ -19,11 +19,11 @@ public class History {
         this.id = id;
     }
 
-    public Integer getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Integer time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

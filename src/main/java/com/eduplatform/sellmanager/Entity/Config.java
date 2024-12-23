@@ -14,4 +14,20 @@ public class Config {
     private Integer id = 1;
     @OneToMany
     private List<User> administors;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<User> getAdministors() {
+        return administors;
+    }
+
+    public void setAdministors(List<User> administors) {
+        this.administors = administors;
+    }
 }

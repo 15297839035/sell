@@ -4,7 +4,15 @@ import java.util.List;
 
 public class ConfigDTO {
     private Integer id;
-    private List<Integer> administor_ids;
+    private Integer user_id;
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
 
     public Integer getId() {
         return id;
@@ -12,13 +20,5 @@ public class ConfigDTO {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public List<Integer> getAdministor_ids() {
-        return administor_ids;
-    }
-
-    public void setAdministor_ids(List<Integer> administor_ids) {
-        this.administor_ids = administor_ids;
     }
 }

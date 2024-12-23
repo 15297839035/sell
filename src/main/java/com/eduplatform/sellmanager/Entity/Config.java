@@ -1,9 +1,6 @@
 package com.eduplatform.sellmanager.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -11,9 +8,11 @@ import java.util.List;
 @Table
 public class Config {
     @Id
-    private Integer id = 1;
-    @OneToMany
-    private List<User> administors;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Integer getId() {
         return id;
@@ -23,11 +22,11 @@ public class Config {
         this.id = id;
     }
 
-    public List<User> getAdministors() {
-        return administors;
+    public User getUser() {
+        return user;
     }
 
-    public void setAdministors(List<User> administors) {
-        this.administors = administors;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

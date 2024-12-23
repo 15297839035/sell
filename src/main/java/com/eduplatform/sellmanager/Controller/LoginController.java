@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @RestController
 @RequestMapping("/login")
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class LoginController {
     @Autowired
     UserService userService;

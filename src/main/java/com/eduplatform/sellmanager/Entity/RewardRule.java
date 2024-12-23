@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 @Table
 public class RewardRule {
     @Id
-    private Integer id = 1;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private boolean if_reward;
     private Integer reward_amount;
     private Integer reward_count;

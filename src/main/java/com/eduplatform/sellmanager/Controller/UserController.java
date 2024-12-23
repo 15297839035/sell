@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserController {
     @Autowired
     UserService userService;
@@ -22,6 +22,8 @@ public class UserController {
     public User getUser(@PathVariable Integer id) {
         return userService.getUser(id);
     }
+    @GetMapping("/name/{name}")
+    public User getUserByName(@PathVariable String name) {return userService.findUserByName(name);}
     @PostMapping
     public void createUser(@RequestBody User user) {
         userService.saveUser(user);

@@ -18,4 +18,5 @@ public class ConfigService {
     public void deleteConfigById(Integer id) {        configRepository.deleteById(id);
     }
     public void saveConfig(Config config) {configRepository.save(config);    }
+
 }

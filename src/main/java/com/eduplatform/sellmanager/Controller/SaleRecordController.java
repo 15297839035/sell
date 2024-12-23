@@ -2,6 +2,7 @@ package com.eduplatform.sellmanager.Controller;
 
 import com.eduplatform.sellmanager.Entity.SaleRecord;
 import com.eduplatform.sellmanager.Entity.SaleRecordDTO;
+import com.eduplatform.sellmanager.Entity.User;
 import com.eduplatform.sellmanager.Service.SaleRecordService;
 import com.eduplatform.sellmanager.Service.UserService;
 import org.springframework.beans.BeanUtils;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/salerecord")
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class SaleRecordController {
     @Autowired
     SaleRecordService saleRecordService;
@@ -26,6 +27,10 @@ public class SaleRecordController {
     @GetMapping("/{id}")
     public SaleRecord getSaleRecordById(@PathVariable Integer id) {
         return saleRecordService.getSaleRecord(id);
+    }
+    @GetMapping("/user/{id}")
+    public User getUser(@PathVariable Integer id){
+        return saleRecordService.getSaleRecord(id).getUser();
     }
     @PostMapping
     public void addSaleRecord(@RequestBody SaleRecordDTO saleRecordDTO) {

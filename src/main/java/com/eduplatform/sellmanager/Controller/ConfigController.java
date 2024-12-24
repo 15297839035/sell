@@ -34,6 +34,7 @@ public class ConfigController {
         BeanUtils.copyProperties(configDTO, config);
         User user = userService.getUser(configDTO.getUser_id());
         config.setUser(user);
+        System.out.println(config.toString());
         configService.saveConfig(config);
     }
     @DeleteMapping("/{id}")

@@ -15,11 +15,10 @@ public class UserController {
     UserService userService;
     @GetMapping
     public List<User> getUser() {
-        System.out.println(11111111);
         return userService.getAllUsers();
     }
     @GetMapping("/{id}")
-    public User getUser(@PathVariable Integer id) {
+    public User getUser1(@PathVariable Integer id) {
         return userService.getUser(id);
     }
     @GetMapping("/name/{name}")
